@@ -1,0 +1,11 @@
+--- libwnck-2.22.0.org/configure.ac	2008-03-10 21:53:39.000000000 +0100
++++ libwnck-2.22.0/configure.ac	2008-03-11 20:17:44.000000000 +0100
+@@ -98,7 +98,7 @@
+      if test "x$no_x" = xyes; then
+        AC_MSG_ERROR("no (requires X development libraries)")
+      else
+-       XLIB_LIBS="$X_PRE_LIBS $X_LIBS -lX11 $X_EXTRA_LIBS"
++       XLIB_LIBS="$X_LIBS -lX11 $X_EXTRA_LIBS"
+        XLIB_CFLAGS=$X_CFLAGS
+      fi])
+ AC_SUBST(X11_PACKAGE)
