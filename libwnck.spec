@@ -1,11 +1,11 @@
 Summary:	General Window Manager interfacing for GNOME utilities
 Name:		libwnck
-Version:	3.4.5
+Version:	3.4.6
 Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/gnome/sources/libwnck/3.4/%{name}-%{version}.tar.xz
-# Source0-md5:	0f50bc70f37b9f3719885e93e4487d9a
+# Source0-md5:	6780261537563baf99a6f0505c8c78f5
 Patch0:		%{name}-link.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
