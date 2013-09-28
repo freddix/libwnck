@@ -1,7 +1,7 @@
 Summary:	General Window Manager interfacing for GNOME utilities
 Name:		libwnck
 Version:	3.4.7
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/gnome/sources/libwnck/3.4/%{name}-%{version}.tar.xz
@@ -43,7 +43,7 @@ libwnck API documentation.
 %patch0 -p1
 
 # kill gnome common deps
-sed -i -e 's/GNOME_COMPILE_WARNINGS.*//g'	\
+%{__sed} -i -e 's/GNOME_COMPILE_WARNINGS.*//g'	\
     -i -e 's/GNOME_MAINTAINER_MODE_DEFINES//g'	\
     -i -e 's/GNOME_COMMON_INIT//g'		\
     -i -e 's/GNOME_DEBUG_CHECK//g' configure.ac
@@ -89,7 +89,6 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libwnck-3.so
-%{_libdir}/libwnck-3.la
 %{_includedir}/%{name}-3.0
 %{_pkgconfigdir}/libwnck-3.0.pc
 %{_datadir}/gir-1.0/Wnck-3.0.gir
