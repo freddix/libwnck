@@ -1,11 +1,11 @@
 Summary:	General Window Manager interfacing for GNOME utilities
 Name:		libwnck
-Version:	3.4.7
-Release:	2
+Version:	3.4.9
+Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/gnome/sources/libwnck/3.4/%{name}-%{version}.tar.xz
-# Source0-md5:	b028685089dd1267dab64cca77fd7f35
+# Source0-md5:	5cb080285e8d5d6a70424cfb43bbf440
 Patch0:		%{name}-link.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -67,7 +67,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -rf $RPM_BUILD_ROOT%{_datadir}/locale/{ca@valencia,crh,en@shaw}
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/*.la
 
 %find_lang %{name}-3.0
 
